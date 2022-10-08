@@ -127,27 +127,6 @@ cat > /etc/xray/config.json << END
                  "password": "${uuid}"
 
 
-#vlessgrpc
-             }
-          ]
-       },
-          "streamSettings":{
-             "network": "grpc",
-             "grpcSettings": {
-                "serviceName": "vless-grpc"
-           }
-        }
-     },
-     {
-      "listen": "/run/xray/vmess_grpc.sock",
-     "protocol": "vmess",
-      "settings": {
-            "clients": [
-               {
-                 "id": "${uuid}",
-                 "alterId": 0
-
-
 
 END
 rm -rf /etc/systemd/system/xray.service.d
